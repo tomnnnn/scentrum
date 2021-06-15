@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./media/favicon.png"/>
     <title>Studentské centrum GFPVM</title>
 </head>
 <body>
@@ -13,8 +14,8 @@
             <div class="navbar">
                 <a class="logo" href="#">
                     <svg width="66" height="67" viewBox="0 0 66 67" fill="none">
-                        <ellipse class="logo-fill" cx="27.8841" cy="19.2546" rx="9.77623" ry="9.77547" transform="rotate(-15 27.8841 19.2546)" fill="#2F3036"/>
-                        <path class="logo-fill" d="M30.8627 54.53C14.504 57.3462 15.5331 51.5663 20.4981 45.6104C30.2521 44.4389 54.3382 34.9568 53.2421 42.1667C52.7172 45.6197 47.2215 51.7138 30.8627 54.53Z" fill="#2F3036"/>
+                        <ellipse class="logo-fill" cx="27.8841" cy="19.2546" rx="9.77623" ry="9.77547" transform="rotate(-15 27.8841 19.2546)" fill="#F66464"/>
+                        <path class="logo-fill" d="M30.8627 54.53C14.504 57.3462 15.5331 51.5663 20.4981 45.6104C30.2521 44.4389 54.3382 34.9568 53.2421 42.1667C52.7172 45.6197 47.2215 51.7138 30.8627 54.53Z" fill="#2EC6B3"/>
                         <mask id="path-3-inside-1" fill="white">
                         <path d="M36.149 17.8152C38.1773 23.4941 36.8366 27.9085 29.5709 29.8554C22.3051 31.8022 18.2276 28.2934 16.8085 22.9974C15.3895 17.7015 17.4145 12.6127 22.6686 11.2048C27.9227 9.79699 33.6819 10.908 36.149 17.8152Z"/>
                         </mask>
@@ -28,9 +29,16 @@
                     <li><a href="#nastenka">Nástěnka</a></li>
                     <li><a href="#projekty">Projekty</a></li>
                     <li><a href="#nost">NOST</a></li>
-                    <li class="btn" id="join-btn"><a href="#pridejse">Chci se zapojit</a></li>
+                    <li id="join-btn">
+                        <a class="btn primary" href="#pridejse">
+                            Chci se zapojit
+                            <svg class="arrow" width="43" height="24" viewBox="0 0 43 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.0144 11.7212H40.5869M40.5869 11.7212L30.5096 1.64392M40.5869 11.7212L30.5096 21.7986" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </li>
                 </ul>
-                <svg class="burger" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                <svg class="burger mobile" width="14" height="10" viewBox="0 0 14 10" fill="none">
                     <path d="M0.321533 0.610229H13.3215" stroke="black"/>
                     <path d="M0.321533 4.93762H13.3215" stroke="black"/>
                     <path d="M0.321533 9.26495H13.3215" stroke="black"/>
@@ -42,15 +50,25 @@
     <main>
         <section class="uvod">
             <h1>Studentské <br> centrum <span>GFPVM</span></h1>
-            <p class="onas-mobile">
+            <p class="onas mobile">
                 Chceme naše studenty a studentky více zapojit do života na škole a vytvářet komunitu, kde se nikdo nemusí bát projevit svůj názor či realizovat vlastní nápady.
             </p>
             <div class="call-to-action">
-                <a class="btn welcome-link main" href="#pridejse">Chci se zapojit</a>
-                <a class="btn welcome-link" href="#projekty">Naše projekty</a>
+                <a class="btn primary" href="#pridejse">
+                    Chci se zapojit
+                    <svg class="arrow" width="43" height="24" viewBox="0 0 43 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.0144 11.7212H40.5869M40.5869 11.7212L30.5096 1.64392M40.5869 11.7212L30.5096 21.7986" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a class="btn" href="#projekty">
+                    Naše projekty
+                    <svg class="arrow" width="43" height="24" viewBox="0 0 43 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.0144 11.7212H40.5869M40.5869 11.7212L30.5096 1.64392M40.5869 11.7212L30.5096 21.7986" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
 
-            <div class="onas">
+            <div class="onas pc">
                 <img class="il-about" src="./media/il-about.svg" alt="">                  
 
                 <p>Chceme naše studenty a studentky více zapojit do života na škole a vytvářet komunitu, kde se nikdo nemusí bát projevit svůj názor či realizovat vlastní nápady.</p>
@@ -59,18 +77,22 @@
 
         <section class="nastenka" id="nastenka">
             <h2>Nástěnka</h2>
-            <div class="articles-showcase">
-                <a href="#" class="latest-article">
-                    <div class="article-img"></div>
-                    <div class="article-content">
-                        <span class="newest-tag">Nejnovější příspevěk</span>
+            <div class="showcase">
+                <a href="#" class="spotlight">
+                    <div class="thumbnail">
+                        <div class="container">
+                            <img src="https://www.gfpvm.cz/img/inline/02.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <span class="tag">Nejnovější příspevěk</span>
                         <h3>Muzejní noc</h3>
-                        <p class="desc">Nemáš co dělat o prázdninách? Přijď nám pomoct s historickou módní přehlídkou pro Noc muzeí!</p>
-                        <span class="desc-mobile">Přečíst si</span>
+                        <p class="pc">Nemáš co dělat o prázdninách? Přijď nám pomoct s historickou módní přehlídkou pro Noc muzeí!</p>
+                        <p class="mobile">Přečíst si</p>
                     </div>
                 </a>
-                <div class="article-readmore">
-                    <a href="#" class="more-link right">
+                <div class="showmore">
+                    <a href="#" class="arrow-link right">
                         <span>Přejít na nástěnku</span>
                         <img class="arrow" src="./media/arrow-right.svg" alt="">
                     </a>                        
@@ -81,12 +103,12 @@
         <section class="projekty" id="projekty">
             <h2>Naše projekty</h2>
             <ul class="projects-showcase">
-                <li class="project"><span>Doučko</span><img class="project-logo" src="media/doucko.svg" alt=""></li>
-                <li class="project"><span>Příručka pro prváky</span></li>
-                <li class="project"><span>Bazar učebnic</span></li>
-                <li class="project"><span>Studenti studentům</span><img class="project-logo" src="media/studenti-studentum.svg" alt=""></li>
+                <li><span>Doučko</span><img class="project-logo" src="./media/doucko.svg" alt=""></li>
+                <li><span>Příručka pro prváky</span></li>
+                <li><span>Bazar učebnic</span></li>
+                <li><span>Studenti studentům</span><img class="project-logo" src="./media/studenti-studentum.svg" alt=""></li>
             </ul>
-            <a class="more-link right" href="#">
+            <a class="arrow-link right" href="#">
                 <span>Zobrazit vše</span>
                 <img class="arrow" src="./media/arrow-right.svg" alt="">
             </a>
@@ -94,82 +116,59 @@
         </section>
 
         <section class="nost" id="nost">
-            <img class="img-nost" src="./media/nost.png" alt="">
-
             <div class="desc">
                 <h2>NOST</h2>
                 <span>Noviny Studentstva</span>
                 <p>Jeden z našich největších dlouhodobých projektů. Noviny studentstva poskytují prostor každému, kdo má co říct. Všechna čísla jsou volně dostupná.</p>
-
-                <a class="more-link" href="#">
-                    <span>Přečtěte si NOST</span>
+                
+                <a class="arrow-link" href="#">
+                    <span>Přečti si NOST</span>
                     <img class="arrow" src="./media/arrow-right.svg" alt="">
                 </a>
             </div>
+            <img class="img-nost pc" src="./media/nost.svg" alt="">
         </section>
 
+        
         <section class="pridejse" id="pridejse">
-            <h2>Zapoj se i ty!</h2>
-            
-            <p>
-                Máš nápad na novou aktivitu nebo se chceš zapojit do stávajícího projektu? Napiš nám, nebo se připoj do našeho Teamu přes odkazy níže!
-                <br>
-                <br>
-                Studentské centrum je otevřeno všem studentům našeho gymnázia.
-            </p>
+            <div class="flexbox">
+                <div class="text-container">
+                    <h2>Zapoj se i ty!</h2>
+                    <p>
+                        Máš nápad na novou aktivitu nebo se chceš zapojit do stávajícího projektu? Připoj se do našeho Teams, nebo nám napiš přes tento formulář!
+                        <br>
+                        <br>
+                        Studentské centrum je otevřeno všem studentům našeho gymnázia.
+                    </p>
+
+                    <a target="_blank" class="arrow-link" href="https://teams.microsoft.com/l/channel/19%3a1a822bd065ee496b94c76646347c0c61%40thread.tacv2/Obecn%25C3%25A9?groupId=7b77f821-2ebb-4a37-898a-31e0344a9f67&tenantId=2612526e-99e4-45de-a898-217a1f1a0e0c">
+                        <span>Připojit se na Teams</span>
+                        <img class="arrow" src="./media/arrow-right.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="form-container">
+                    <form action="#" class="contact-form">
+                        <h3>Napiš nám!</h3>
+                        <input class="input" type="text" name="name" placeholder="Jméno">
+                        <input class="input" type="text" name="email" placeholder="E-mail">
+                        <textarea rows="15" class="input" name="message" placeholder="Zpráva"></textarea>
+                        <br><button class="btn" type="submit">Odeslat 
+                            <svg class="arrow" width="43" height="24" viewBox="0 0 43 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.0144 11.7212H40.5869M40.5869 11.7212L30.5096 1.64392M40.5869 11.7212L30.5096 21.7986" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
-    <script>
-        const nav = document.getElementsByTagName("nav")[0];
-        const join_btn = document.getElementById("join-btn")
-        const nav_logo = document.getElementsByClassName("logo")[0]
-        const section_1 = document.getElementsByClassName("uvod")[0]
-        const section_2 = document.getElementsByClassName("nastenka")[0]
-        const section_3 = document.getElementsByClassName("projekty")[0]
-        window.addEventListener("scroll", () => {
-            if (window.scrollY < 35 && nav.classList.contains("scroll")) {
-                nav.classList.remove("scroll")
-            }
-            else if (window.scrollY >= 35 && !nav.classList.contains("scroll")) {
-                nav.classList.add("scroll")
-            }
+    <footer>
+        <a class="signature" href="http://www.gfpvm.cz">
+            Made with &hearts; by GFPVM students
+        </a>
+    </footer>
 
-            if (window.scrollY < section_1.offsetTop && join_btn.classList.contains("scroll")) {
-                join_btn.classList.remove("scroll")
-            }
-
-            else if(window.scrollY >= section_1.offsetTop && !join_btn.classList.contains("scroll")) {
-                join_btn.classList.add("scroll")
-            }
-
-            if(window.scrollY <= section_1.offsetTop && !nav_logo.classList.contains("black")) {
-                nav_logo.classList.remove("blue")
-                nav_logo.classList.add("black")
-            }
-
-            else if(window.scrollY >= section_1.offsetTop && window.scrollY < section_2.offsetTop && !nav_logo.classList.contains("blue")) {
-                nav_logo.classList.remove("black")
-                nav_logo.classList.remove("red")
-                nav_logo.classList.add("blue")
-            }
-
-            else if(window.scrollY >= section_2.offsetTop && nav_logo.classList.contains("blue")) {
-                nav_logo.classList.remove("blue")
-                nav_logo.classList.add("red")
-            }
-        })
-
-        const body = document.body
-
-        document.body.addEventListener("click", (e) => {
-            if(event.target.classList.contains("burger") && !body.classList.contains("menu-open")) {
-                body.classList.add("menu-open")
-            }
-            else if (event.target.classList.contains("burger") && body.classList.contains("menu-open")) {
-                body.classList.remove("menu-open")
-            }
-        })
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
